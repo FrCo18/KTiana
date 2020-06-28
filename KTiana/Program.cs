@@ -8,6 +8,7 @@ namespace KTiana
 {
     static class Program
     {
+        public static ServicesEntities BD = new ServicesEntities();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

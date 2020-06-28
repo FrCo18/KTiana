@@ -83,6 +83,7 @@
             this.textBoxSeriasPasport.Name = "textBoxSeriasPasport";
             this.textBoxSeriasPasport.Size = new System.Drawing.Size(100, 20);
             this.textBoxSeriasPasport.TabIndex = 3;
+            this.textBoxSeriasPasport.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
             // textBoxNumberPasport
             // 
@@ -90,6 +91,7 @@
             this.textBoxNumberPasport.Name = "textBoxNumberPasport";
             this.textBoxNumberPasport.Size = new System.Drawing.Size(100, 20);
             this.textBoxNumberPasport.TabIndex = 5;
+            this.textBoxNumberPasport.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
             // label3
             // 
@@ -161,10 +163,11 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(325, 73);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(447, 253);
+            this.listView1.Size = new System.Drawing.Size(463, 253);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // FIO
             // 
@@ -201,6 +204,7 @@
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonEdit
             // 
@@ -210,6 +214,7 @@
             this.buttonEdit.TabIndex = 14;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDel
             // 
@@ -219,6 +224,7 @@
             this.buttonDel.TabIndex = 15;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // Agents
             // 

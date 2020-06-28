@@ -19,7 +19,14 @@ namespace KTiana
 
         private void buttonAgents_Click(object sender, EventArgs e)
         {
+            Agents agents = new Agents();
+            agents.Show();
+        }
 
+        private void buttonClients_Click(object sender, EventArgs e)
+        {
+            Client client = new Client();
+            client.Show();
         }
     }
 }
