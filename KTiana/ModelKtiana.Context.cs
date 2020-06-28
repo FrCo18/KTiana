@@ -26,6 +26,9 @@ namespace KTiana
         }
     
         public virtual DbSet<Clients> Clients { get; set; }
+        public virtual DbSet<Contracts> Contracts { get; set; }
+        public virtual DbSet<Salary> Salary { get; set; }
+        public virtual DbSet<Services> Services { get; set; }
         public virtual DbSet<Workers> Workers { get; set; }
     }
 }

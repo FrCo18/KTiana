@@ -12,24 +12,18 @@ namespace KTiana
     using System;
     using System.Collections.Generic;
     
-    public partial class Clients
+    public partial class Services
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Clients()
+        public Services()
         {
             this.Contracts = new HashSet<Contracts>();
         }
     
-        public int id_client { get; set; }
-        public int inn { get; set; }
-        public int kpp { get; set; }
-        public int r_s { get; set; }
-        public string phone { get; set; }
-        public string email { get; set; }
-        public string NameOrganization { get; set; }
-        public int id_worker { get; set; }
+        public int id_service { get; set; }
+        public string Service { get; set; }
+        public int Price { get; set; }
     
-        public virtual Workers Workers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contracts> Contracts { get; set; }
     }

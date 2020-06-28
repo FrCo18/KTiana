@@ -4,9 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3f37817f8d3f4a1dae1f514b95e7040c" Name="Diagram1">
-        <EntityTypeShape EntityType="ServicesModel.Clients" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ServicesModel.Workers" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="73d03bff12884e93b25c0d3ac93642b2" Name="Diagram1">
+        <EntityTypeShape EntityType="ServicesModel.Clients" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServicesModel.Contracts" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServicesModel.Salary" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServicesModel.Services" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServicesModel.Workers" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="ServicesModel.FK_Clients_Workers" ManuallyRouted="false" />
+        <AssociationConnector Association="ServicesModel.FK_Contracts_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="ServicesModel.FK_Contracts_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="ServicesModel.FK_Contracts_Workers" ManuallyRouted="false" />
+        <AssociationConnector Association="ServicesModel.FK_Salary_Workers" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

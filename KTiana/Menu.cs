@@ -28,5 +28,23 @@ namespace KTiana
             Client client = new Client();
             client.Show();
         }
+
+        private void buttonServices_Click(object sender, EventArgs e)
+        {
+            FormServices services = new FormServices();
+            services.Show();
+        }
+
+        private void buttonContracts_Click(object sender, EventArgs e)
+        {
+            FormContracts contracts = new FormContracts();
+            contracts.Show();
+        }
+
+        private void buttonAddedClients_Click(object sender, EventArgs e)
+        {
+            FormAddedClients addedClients = new FormAddedClients();
+            addedClients.Show();
+        }
     }
 }

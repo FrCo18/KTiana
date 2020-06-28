@@ -50,6 +50,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -248,6 +249,7 @@
             this.Controls.Add(this.textBoxFIO);
             this.Controls.Add(this.label1);
             this.Name = "Agents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сотрудники";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -278,5 +280,6 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDel;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -14,6 +14,14 @@ namespace KTiana
     
     public partial class Workers
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Workers()
+        {
+            this.Clients = new HashSet<Clients>();
+            this.Contracts = new HashSet<Contracts>();
+            this.Salary = new HashSet<Salary>();
+        }
+    
         public int id_worker { get; set; }
         public string FIO { get; set; }
         public string Phone { get; set; }
@@ -21,5 +29,12 @@ namespace KTiana
         public string Email { get; set; }
         public int SeriasPasport { get; set; }
         public int NumberPasport { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Clients> Clients { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Contracts> Contracts { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Salary> Salary { get; set; }
     }
 }

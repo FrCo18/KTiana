@@ -37,6 +37,7 @@
             this.NumberKPP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.R_S = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
@@ -49,12 +50,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxR_S = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.R_S = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Worker = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBoxWorkers = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(330, 364);
+            this.buttonDel.Location = new System.Drawing.Point(801, 350);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(75, 23);
             this.buttonDel.TabIndex = 31;
@@ -64,7 +67,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(230, 364);
+            this.buttonEdit.Location = new System.Drawing.Point(701, 350);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 30;
@@ -74,7 +77,7 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(134, 364);
+            this.buttonAdd.Location = new System.Drawing.Point(605, 350);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 29;
@@ -90,19 +93,22 @@
             this.NumberKPP,
             this.Phone,
             this.Email,
-            this.R_S});
+            this.R_S,
+            this.Worker});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(307, 63);
+            this.listView1.Location = new System.Drawing.Point(292, 73);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(463, 253);
+            this.listView1.Size = new System.Drawing.Size(584, 253);
             this.listView1.TabIndex = 28;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
             // 
             // FIO
             // 
             this.FIO.Text = "Организация";
+            this.FIO.Width = 103;
             // 
             // INN
             // 
@@ -121,6 +127,10 @@
             // Email
             // 
             this.Email.Text = "Почта";
+            // 
+            // R_S
+            // 
+            this.R_S.Text = "Р/С";
             // 
             // textBoxEmail
             // 
@@ -160,6 +170,7 @@
             this.textBoxKPP.Name = "textBoxKPP";
             this.textBoxKPP.Size = new System.Drawing.Size(100, 20);
             this.textBoxKPP.TabIndex = 21;
+            this.textBoxKPP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
             // label3
             // 
@@ -176,6 +187,7 @@
             this.textBoxINN.Name = "textBoxINN";
             this.textBoxINN.Size = new System.Drawing.Size(100, 20);
             this.textBoxINN.TabIndex = 19;
+            this.textBoxINN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
             // label2
             // 
@@ -218,15 +230,35 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "Р/С";
             // 
-            // R_S
+            // Worker
             // 
-            this.R_S.Text = "Р/С";
+            this.Worker.Text = "Сотрудник";
+            this.Worker.Width = 77;
+            // 
+            // comboBoxWorkers
+            // 
+            this.comboBoxWorkers.FormattingEnabled = true;
+            this.comboBoxWorkers.Location = new System.Drawing.Point(12, 305);
+            this.comboBoxWorkers.Name = "comboBoxWorkers";
+            this.comboBoxWorkers.Size = new System.Drawing.Size(254, 21);
+            this.comboBoxWorkers.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 279);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Сотрудник";
             // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(888, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.comboBoxWorkers);
             this.Controls.Add(this.textBoxR_S);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonDel);
@@ -244,7 +276,8 @@
             this.Controls.Add(this.textBoxNameOrganization);
             this.Controls.Add(this.label1);
             this.Name = "Client";
-            this.Text = "Client";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Клиенты";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +307,8 @@
         private System.Windows.Forms.TextBox textBoxR_S;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ColumnHeader R_S;
+        private System.Windows.Forms.ColumnHeader Worker;
+        private System.Windows.Forms.ComboBox comboBoxWorkers;
+        private System.Windows.Forms.Label label7;
     }
 }
