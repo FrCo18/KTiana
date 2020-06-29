@@ -79,6 +79,12 @@
     <Compile Include="FormAddedClients.Designer.cs">
       <DependentUpon>FormAddedClients.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddUser.Designer.cs">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAutorization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     <Compile Include="Services.cs">
       <DependentUpon>ModelKtiana.tt</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>ModelKtiana.tt</DependentUpon>
+    </Compile>
     <Compile Include="Workers.cs">
       <DependentUpon>ModelKtiana.tt</DependentUpon>
     </Compile>
@@ -140,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddedClients.resx">
       <DependentUpon>FormAddedClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddUser.resx">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutorization.resx">
+      <DependentUpon>FormAutorization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormContracts.resx">
       <DependentUpon>FormContracts.cs</DependentUpon>

@@ -124,5 +124,10 @@ namespace KTiana
                     ShowContracts();
             }
         }
+
+        private void FormContracts_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0.9;
+        }
     }
 }

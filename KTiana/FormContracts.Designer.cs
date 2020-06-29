@@ -198,6 +198,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormContracts";
             this.Text = "Договора";
+            this.Load += new System.EventHandler(this.FormContracts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

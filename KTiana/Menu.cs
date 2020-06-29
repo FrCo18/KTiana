@@ -52,5 +52,40 @@ namespace KTiana
             FormSalary formSalary = new FormSalary();
             formSalary.Show();
         }
+
+        private void buttonAddUser_Click(object sender, EventArgs e)
+        {
+            FormAddUser addUser = new FormAddUser();
+            addUser.Show();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0.9;
+            if (FormAutorization.user.type != "admin")
+            {
+                buttonAddUser.Enabled = false;
+                buttonAddUser.Visible = false;
+
+                buttonAgents.Enabled = false;
+                buttonAgents.Visible = false;
+
+                buttonAddedClients.Location = new Point(31,12);
+                buttonSalary.Location = new Point(31, 69);
+                this.Width = 189;
+            }
+            else
+            {
+                buttonAddedClients.Location = new Point(150, 68);
+                buttonSalary.Location = new Point(150, 124);
+                this.Width = 298;
+
+                buttonAddUser.Enabled = true;
+                buttonAddUser.Visible = true;
+
+                buttonAgents.Enabled = true;
+                buttonAgents.Visible = true;
+            }
+        }
     }
 }

@@ -34,7 +34,7 @@
             this.buttonContracts = new System.Windows.Forms.Button();
             this.buttonAddedClients = new System.Windows.Forms.Button();
             this.buttonSalary = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAgents
@@ -79,7 +79,7 @@
             // 
             // buttonAddedClients
             // 
-            this.buttonAddedClients.Location = new System.Drawing.Point(150, 69);
+            this.buttonAddedClients.Location = new System.Drawing.Point(150, 68);
             this.buttonAddedClients.Name = "buttonAddedClients";
             this.buttonAddedClients.Size = new System.Drawing.Size(113, 50);
             this.buttonAddedClients.TabIndex = 4;
@@ -97,21 +97,22 @@
             this.buttonSalary.UseVisualStyleBackColor = true;
             this.buttonSalary.Click += new System.EventHandler(this.buttonSalary_Click);
             // 
-            // button1
+            // buttonAddUser
             // 
-            this.button1.Location = new System.Drawing.Point(31, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 50);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Зарплата";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddUser.Location = new System.Drawing.Point(31, 12);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(113, 50);
+            this.buttonAddUser.TabIndex = 6;
+            this.buttonAddUser.Text = "Добавление пользователя";
+            this.buttonAddUser.UseVisualStyleBackColor = true;
+            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 340);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(282, 305);
+            this.Controls.Add(this.buttonAddUser);
             this.Controls.Add(this.buttonSalary);
             this.Controls.Add(this.buttonAddedClients);
             this.Controls.Add(this.buttonContracts);
@@ -121,6 +122,7 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Меню";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
 
         }
@@ -133,7 +135,7 @@
         private System.Windows.Forms.Button buttonContracts;
         private System.Windows.Forms.Button buttonAddedClients;
         private System.Windows.Forms.Button buttonSalary;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddUser;
     }
 }
 

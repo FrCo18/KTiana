@@ -112,5 +112,10 @@ namespace KTiana
             }
            
         }
+
+        private void Agents_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0.9;
+        }
     }
 }

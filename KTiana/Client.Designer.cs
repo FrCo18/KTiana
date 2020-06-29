@@ -38,6 +38,7 @@
             this.Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.R_S = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Worker = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
@@ -50,16 +51,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxR_S = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Worker = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBoxWorkers = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(801, 350);
+            this.buttonDel.Location = new System.Drawing.Point(754, 346);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(75, 23);
+            this.buttonDel.Size = new System.Drawing.Size(103, 43);
             this.buttonDel.TabIndex = 31;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(701, 350);
+            this.buttonEdit.Location = new System.Drawing.Point(640, 346);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(103, 43);
             this.buttonEdit.TabIndex = 30;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(605, 350);
+            this.buttonAdd.Location = new System.Drawing.Point(530, 346);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(103, 43);
             this.buttonAdd.TabIndex = 29;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -131,6 +131,11 @@
             // R_S
             // 
             this.R_S.Text = "Р/С";
+            // 
+            // Worker
+            // 
+            this.Worker.Text = "Сотрудник";
+            this.Worker.Width = 77;
             // 
             // textBoxEmail
             // 
@@ -230,11 +235,6 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "Р/С";
             // 
-            // Worker
-            // 
-            this.Worker.Text = "Сотрудник";
-            this.Worker.Width = 77;
-            // 
             // comboBoxWorkers
             // 
             this.comboBoxWorkers.FormattingEnabled = true;
@@ -256,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 450);
+            this.ClientSize = new System.Drawing.Size(888, 411);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBoxWorkers);
             this.Controls.Add(this.textBoxR_S);
@@ -278,6 +278,7 @@
             this.Name = "Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Клиенты";
+            this.Load += new System.EventHandler(this.Client_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -32,12 +32,12 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.NameService = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNameService = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.NameService = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonDel
@@ -85,6 +85,15 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
+            // NameService
+            // 
+            this.NameService.Text = "Услуга";
+            // 
+            // Price
+            // 
+            this.Price.Text = "Стоимость";
+            this.Price.Width = 89;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -118,15 +127,6 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Стоимость";
             // 
-            // NameService
-            // 
-            this.NameService.Text = "Услуга";
-            // 
-            // Price
-            // 
-            this.Price.Text = "Стоимость";
-            this.Price.Width = 89;
-            // 
             // FormServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,6 +143,7 @@
             this.Name = "FormServices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Услуги";
+            this.Load += new System.EventHandler(this.FormServices_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

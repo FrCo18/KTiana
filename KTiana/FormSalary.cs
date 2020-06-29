@@ -18,14 +18,6 @@ namespace KTiana
             ShowSalary();
             ShowComboBoxWorker();
         }
-        void j()
-        {
-            int i = 0;
-            foreach(Contracts contracts in Program.BD.Contracts)
-            {
-               // if
-            }
-        }
         void ShowComboBoxWorker()
         {
             comboBoxWorkers.Items.Clear();
@@ -131,6 +123,31 @@ namespace KTiana
                     listView1.Items.Add(item);
                     listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }
+            }
+        }
+
+        private void FormSalary_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0.9;
+            if (FormAutorization.user.type != "admin")
+            {
+                buttonEdit.Enabled = false;
+                buttonEdit.Visible = false;
+                label1.Visible = false;
+                label2.Visible = false;
+                textBoxSalary.Visible = false;
+                textBoxPrize.Visible = false;
+                this.Width = 485;
+            }
+            else
+            {
+                textBoxSalary.Visible = true;
+                textBoxPrize.Visible = true;
+                label1.Visible = true;
+                label2.Visible = true;
+                this.Width = 674;
+                buttonEdit.Enabled = true;
+                buttonEdit.Visible = true;
             }
         }
     }

@@ -86,5 +86,10 @@ namespace KTiana
                 ShowServices();
             }
         }
+
+        private void FormServices_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0.9;
+        }
     }
 }

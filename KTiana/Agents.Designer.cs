@@ -199,9 +199,9 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(152, 374);
+            this.buttonAdd.Location = new System.Drawing.Point(505, 332);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(87, 39);
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -209,9 +209,9 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(248, 374);
+            this.buttonEdit.Location = new System.Drawing.Point(601, 332);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(87, 39);
             this.buttonEdit.TabIndex = 14;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -219,9 +219,9 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(348, 374);
+            this.buttonDel.Location = new System.Drawing.Point(701, 332);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(75, 23);
+            this.buttonDel.Size = new System.Drawing.Size(87, 39);
             this.buttonDel.TabIndex = 15;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -231,7 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 401);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
@@ -251,6 +251,7 @@
             this.Name = "Agents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сотрудники";
+            this.Load += new System.EventHandler(this.Agents_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

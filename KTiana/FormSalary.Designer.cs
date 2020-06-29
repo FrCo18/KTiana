@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxWorkers = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -48,7 +49,7 @@
             this.Prize});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(276, 47);
+            this.listView1.Location = new System.Drawing.Point(6, 34);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(459, 258);
             this.listView1.TabIndex = 0;
@@ -73,9 +74,9 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(65, 364);
+            this.buttonEdit.Location = new System.Drawing.Point(6, 298);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(132, 42);
             this.buttonEdit.TabIndex = 1;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -83,14 +84,14 @@
             // 
             // textBoxSalary
             // 
-            this.textBoxSalary.Location = new System.Drawing.Point(40, 72);
+            this.textBoxSalary.Location = new System.Drawing.Point(471, 51);
             this.textBoxSalary.Name = "textBoxSalary";
             this.textBoxSalary.Size = new System.Drawing.Size(100, 20);
             this.textBoxSalary.TabIndex = 2;
             // 
             // textBoxPrize
             // 
-            this.textBoxPrize.Location = new System.Drawing.Point(40, 135);
+            this.textBoxPrize.Location = new System.Drawing.Point(471, 114);
             this.textBoxPrize.Name = "textBoxPrize";
             this.textBoxPrize.Size = new System.Drawing.Size(100, 20);
             this.textBoxPrize.TabIndex = 3;
@@ -98,7 +99,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 56);
+            this.label1.Location = new System.Drawing.Point(468, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 4;
@@ -107,7 +108,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 119);
+            this.label2.Location = new System.Drawing.Point(468, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 5;
@@ -116,17 +117,27 @@
             // comboBoxWorkers
             // 
             this.comboBoxWorkers.FormattingEnabled = true;
-            this.comboBoxWorkers.Location = new System.Drawing.Point(40, 265);
+            this.comboBoxWorkers.Location = new System.Drawing.Point(471, 200);
             this.comboBoxWorkers.Name = "comboBoxWorkers";
             this.comboBoxWorkers.Size = new System.Drawing.Size(170, 21);
             this.comboBoxWorkers.TabIndex = 6;
             this.comboBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.comboBoxWorkers_SelectedIndexChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(468, 184);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Сотрудник";
+            // 
             // FormSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(658, 368);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxWorkers);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -137,6 +148,7 @@
             this.Name = "FormSalary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Зарплата";
+            this.Load += new System.EventHandler(this.FormSalary_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +166,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxWorkers;
+        private System.Windows.Forms.Label label3;
     }
 }

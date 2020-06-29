@@ -42,5 +42,10 @@ namespace KTiana
                 }
             }
         }
+
+        private void FormAddedClients_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0.9;
+        }
     }
 }

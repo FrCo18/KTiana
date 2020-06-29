@@ -121,5 +121,10 @@ namespace KTiana
                 textBoxR_S.Text = clients.r_s.ToString();
             }
         }
+
+        private void Client_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0.9;
+        }
     }
 }

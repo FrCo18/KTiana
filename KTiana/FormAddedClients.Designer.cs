@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 208);
+            this.label1.Location = new System.Drawing.Point(12, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // comboBoxWorkers
             // 
             this.comboBoxWorkers.FormattingEnabled = true;
-            this.comboBoxWorkers.Location = new System.Drawing.Point(12, 224);
+            this.comboBoxWorkers.Location = new System.Drawing.Point(12, 83);
             this.comboBoxWorkers.Name = "comboBoxWorkers";
             this.comboBoxWorkers.Size = new System.Drawing.Size(211, 21);
             this.comboBoxWorkers.TabIndex = 1;
@@ -60,7 +60,7 @@
             this.Worker});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(280, 121);
+            this.listView1.Location = new System.Drawing.Point(242, 23);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(350, 197);
             this.listView1.TabIndex = 2;
@@ -81,13 +81,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(646, 274);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.comboBoxWorkers);
             this.Controls.Add(this.label1);
             this.Name = "FormAddedClients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавленные клиенты";
+            this.Load += new System.EventHandler(this.FormAddedClients_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
