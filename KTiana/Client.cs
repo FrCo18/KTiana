@@ -91,13 +91,21 @@ namespace KTiana
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count == 1)
+            try
             {
-                Clients clients = listView1.SelectedItems[0].Tag as Clients;
-                Program.BD.Clients.Remove(clients);
-                Program.BD.SaveChanges();
-                ShowClients();
+                if (listView1.SelectedItems.Count == 1)
+                {
+                    Clients clients = listView1.SelectedItems[0].Tag as Clients;
+                    Program.BD.Clients.Remove(clients);
+                    Program.BD.SaveChanges();
+                    ShowClients();
+                }
             }
+            catch
+            {
+                MessageBox.Show("Поле используется!");
+            }
+
         }
 
         private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)

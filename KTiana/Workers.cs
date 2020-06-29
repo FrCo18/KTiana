@@ -19,7 +19,6 @@ namespace KTiana
         {
             this.Clients = new HashSet<Clients>();
             this.Contracts = new HashSet<Contracts>();
-            this.Salary = new HashSet<Salary>();
         }
     
         public int id_worker { get; set; }
@@ -29,12 +28,12 @@ namespace KTiana
         public string Email { get; set; }
         public int SeriasPasport { get; set; }
         public int NumberPasport { get; set; }
+        public Nullable<int> Salary { get; set; }
+        public Nullable<int> Prize { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Clients> Clients { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contracts> Contracts { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Salary> Salary { get; set; }
     }
 }

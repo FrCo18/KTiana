@@ -29,6 +29,8 @@ namespace KTiana
                 workers.Phone = textBoxPhone.Text;
                 workers.Position = textBoxPosition.Text;
                 workers.Email = textBoxEmail.Text;
+                workers.Salary = 50000;
+                workers.Prize = 0;
                 Program.BD.Workers.Add(workers);
                 Program.BD.SaveChanges();
                 ShowWorkers();
@@ -93,13 +95,22 @@ namespace KTiana
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count == 1)
+            try
             {
-                Workers workers = listView1.SelectedItems[0].Tag as Workers;
-                Program.BD.Workers.Remove(workers);
-                 Program.BD.SaveChanges();
+                if (listView1.SelectedItems.Count == 1)
+                {
+                    Workers workers = listView1.SelectedItems[0].Tag as Workers;
+                    Program.BD.Workers.Remove(workers);
+                    Program.BD.SaveChanges();
                     ShowWorkers();
+                }
+
             }
+            catch
+            {
+                MessageBox.Show("Поле используется!","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+           
         }
     }
 }

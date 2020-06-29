@@ -46,5 +46,11 @@ namespace KTiana
             FormAddedClients addedClients = new FormAddedClients();
             addedClients.Show();
         }
+
+        private void buttonSalary_Click(object sender, EventArgs e)
+        {
+            FormSalary formSalary = new FormSalary();
+            formSalary.Show();
+        }
     }
 }
